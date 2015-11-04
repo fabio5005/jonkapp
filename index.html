@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html ng-app="mainController">
+<html ng-app="mainModule">
 <head>
     <title>Angular Test</title>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"/>
-    <script src="controller.js" />
+    <!-- style -->
+    <link rel="stylesheet" href="styles/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="styles/main.css">
- 
+    <!-- lib -->
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/moment-timezone/moment-timezone.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="styles/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- controller -->
 
-  </head>
-  
 
 
 </head>
-<body ng-controller="controller">
-   	
+  
+<body>
+   <menu class="menu"></menu>
+    <div style="top:0; left:0; width:auto; height:auto;">
+        <ng-view></ng-view>
+    </div>
 
-
-    <select ng-model="country">
-    </select>
-      
+    <script src="js/appconfig.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
     
-
-
+    <script src="controller.js"></script>
+    <script src="controllers/menuController.js"></script>
+    
 
 
 </body>
